@@ -1,4 +1,4 @@
-!/usr/bin/python3
+#!/usr/bin/python3
 """Fabric script that generates .tgz archive from web_static folder."""
 import os
 from fabric.api import local, runs_once
