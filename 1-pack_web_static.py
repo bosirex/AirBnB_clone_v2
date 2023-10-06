@@ -4,6 +4,7 @@ import os
 from fabric.api import local, runs_once
 from datetime import datetime
 
+
 @runs_once
 def do_pack():
     """function archives static files."""
