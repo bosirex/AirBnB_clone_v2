@@ -9,13 +9,13 @@ app = Flask("__name__")
 
 
 @app.route('/', strict_slashes=False)
-def hello():
+def didplay_hello_hbnb():
     """Return a given string"""
     return ("Hello HBNB!")
 
 
 @app.route("/hbnb", strict_slashes=False)
-def hbnb():
+def display_hbnb():
     """Returns a given string"""
     return ("HBNB")
 
