@@ -5,39 +5,39 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def hello():
+def display_hello_hbnb():
     """Return a given string"""
     return "Hello HBNB!"
 
 
 @app.route('/hbnb', strict_slashes=False)
-def hbnb():
+def display_hbnb():
     """Returns a given string"""
     return "HBNB"
 
 
 @app.route('/c/<text>', strict_slashes=False)
-def cText(text):
+def display_cText(text):
     """display C followed by the value of the text variable"""
     return "C {}".format(text.replace("_", " "))
 
 
 @app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
-def pythonText(text="is cool"):
+def display_pythonText(text="is cool"):
     """display Python followed by the value of the text variable"""
     return "Python {}".format(text.replace("_", " "))
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
-def isNumber(n):
+def display_isNumber(n):
     """display “n is a number” only if n is an integer"""
     if isinstance(n, int):
         return "{} is a number".format(n)
 
 
 @app.route('/number_template/<int:n>', strict_slashes=False)
-def number_template(n=None):
+def display_number_template(n=None):
     """display a HTML page only if n is an integer"""
     if isinstance(n, int):
         return render_template("5-number.html", n=n)
