@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Importing Flask to run the web app"""
+"""Import Flask to the web app"""
 from flask import Flask, render_template
 from models import storage
 from models.state import State
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 @app.route("/states_list", strict_slashes=False)
-def display_states():
+def display_states_list():
     """Render state_list html page to display States created"""
     states = storage.all()
     return render_template('7-states_list.html', states=states)
