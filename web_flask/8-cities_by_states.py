@@ -15,7 +15,7 @@ def close(self):
 
 
 @app.route('/cities_by_states', strict_slashes=False)
-def cities_by_states():
+def display_cities_by_states():
     """Displays a html page with states and cities"""
     states = storage.all(State)
     return render_template('8-cities_by_states.html', states=states)
